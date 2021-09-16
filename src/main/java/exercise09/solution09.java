@@ -1,31 +1,41 @@
 package exercise09;
-
 import java.util.Scanner;
 
-public class solution09 {
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            double sqFGP = 350;
+class Dimensions {
+    double l;
+    double w;
 
-            System.out.print("Ent'r length: ");
-            double l = sc.nextDouble();
+    public void scn() {
+        Scanner sc = new Scanner(System.in);
 
-            System.out.print("Ent'r width: ");
-            double w = sc.nextDouble();
+        System.out.print("Ent'r length: ");
+        this.w = sc.nextDouble();
 
-            double totalSq = l*w;
-
-            int gallon = (int)Math.ceil(totalSq/sqFGP); //round to whole number
-
-            System.out.println("Thee shall needeth to purchaseth "+gallon+" of painteth to cov'r "+totalSq+" squre feet");
-        }
+        System.out.print("Ent'r width: ");
+        this.l = sc.nextDouble();
     }
 
-/*psuedocode bb: first we import the scanner function, after creating the main function an instance of the scanner
-function is made. next, we make a double set to 350 under the name "sqFPG" for the amount of sq feet a gallon of
-paint covers. next the code output a statement and reads in length and does the same thing with the width. these
-are saved in doubles "l" and "w" respectively. after that the total sq feet is stored in a double called "totalSq"
-which multiplies the numbers given from the user. finally, we get the value for how many gallons will be needed
-by dividing totalSq and sqFPG and then use the math.ceil function to round the final answer to the closest whole
-number. the system then prints out all the numbers in Shakespearean.
+    public void prt() {
+        double sqFGP = 350;
+        double totalSq = l*w;
+        int gallon = (int)Math.ceil(totalSq/sqFGP); //round to whole number
+
+        System.out.println("Thee shall needeth to purchaseth "+gallon+" of painteth to cov'r "+totalSq+" square feet");
+    }
+}
+public class solution09 {
+        public static void main(String[] args) {
+
+            Dimensions ca = new Dimensions();
+            ca.scn();
+            ca.prt();
+        }
+    }
+/*if one is getting reformatted, they all are. this one was far easier to fix admittedly. first the
+scanner function was imported. after that  a class called Dimensions is made  to store the prt and
+scn public voids as well as the doubles "l" and "w" for the length and width. the "scn" void reads
+in the data given by the user and then the "prt" void does the math and prints out the answers. the
+final answer is rounded to the closest whole number using the math ceil function. the main function
+simply calls these two public voids to run the program.
+
  */
