@@ -1,7 +1,12 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 9 Solution
+ *  Copyright 2021 Isaac Lynch
+ */
+
 package exercise09;
 import java.util.Scanner;
 
-class Dimensions {
+class Paint {
     double l;
     double w;
 
@@ -26,7 +31,7 @@ class Dimensions {
 public class solution09 {
         public static void main(String[] args) {
 
-            Dimensions ca = new Dimensions();
+            Paint ca = new Paint();
             ca.scn();
             ca.prt();
         }
